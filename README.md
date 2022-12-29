@@ -28,37 +28,38 @@ The following are the list of algorithms we use:
 
 ## Hyperparameter Tuning ##
 
-We use GridSearchCV to improve the results that we previously got.
-For Logistic Regression we used the following parameters:
+We use GridSearchCV to improve the results that we previously got. Here are the parameters we used for different models.
+
+#### For Logistic Regression: ####
 - max_iter= 1000
 - solvers = ['lbfgs', 'liblinear', 'newton-cg', 'newton-cholesky', 'sag', 'saga']
 - penalty = ['l2', 'l1', 'elasticnet']
 - c_values = [1000, 100, 10, 1.0, 0.1, 0.01, 0.001]
 = Best: 0.990635 using {'C': 10, 'penalty': 'l1', 'solver': 'saga'}
 
-For Nearest Neighbour:
+#### For Nearest Neighbour: ####
 - n_neighbors = range(1, 21, 2)
 - weights = ['uniform', 'distance']
 - metric = ['euclidean', 'manhattan', 'minkowski']
 = Best: 0.982023 using {'C': 10, 'gamma': 0.01, 'kernel': 'rbf'}
 
-For Support Vector Machines:
+#### For Support Vector Machines: #### 
 - kernel = ['poly', 'rbf', 'sigmoid']
 - C = [1000, 100, 10, 1.0, 0.1, 0.01, 0.001]
 - gamma = [0.02, 0.01]
 = Best: 0.982023 using {'C': 10, 'gamma': 0.01, 'kernel': 'rbf'}
 
-For Naive Bayes:
+#### For Naive Bayes: #### 
 We don't have any parameters
 
-For Decision Tree Classifier:
+#### For Decision Tree Classifier: #### 
 - criterion = ['gini', 'entropy', 'log_loss']
 - max_depth = [4,5,6,7,8,9,10,11,12,15,20,30,40,50,70,90,120,150]
 - max_leaf_nodes = [2,4,6,10,15,30,40,50,100]
 - min_samples_split = [2, 3, 4]
 = Best: 0.931847 using {'criterion': 'log_loss', 'max_depth': 5, 'max_leaf_nodes': 10}
 
-For Random Forest Classifier:
+#### For Random Forest Classifier:#### 
 - n_estimators = [10, 100, 1000]
 - criterion = ['gini', 'entropy', 'log_loss']
 = Best: 0.962435 using {'criterion': 'log_loss', 'max_features': 'log2', 'n_estimators': 100}
