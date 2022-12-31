@@ -59,7 +59,7 @@ We don't have any parameters
 - min_samples_split = [2, 3, 4]
 = Best: 0.931847 using {'criterion': 'log_loss', 'max_depth': 5, 'max_leaf_nodes': 10}
 
-#### For Random Forest Classifier:#### 
+#### For Random Forest Classifier: #### 
 - n_estimators = [10, 100, 1000]
 - criterion = ['gini', 'entropy', 'log_loss']
 = Best: 0.962435 using {'criterion': 'log_loss', 'max_features': 'log2', 'n_estimators': 100}
